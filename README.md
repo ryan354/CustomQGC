@@ -4,6 +4,9 @@
 
 The CustomQGC (Custom Ground Control) application enhances the functionality of Remotely Operated Vehicles (ROVs) used for tunnel inspection. This application implements a centering algorithm and obstacle avoidance using an array of eight altimeter echosounder sensors. The data from these sensors is processed using a Kalman filter algorithm to ensure accuracy and reliability.
 
+<p align="center">
+  <img src="CustomQGC.PNG">
+</p>
 ## Key Features
 
 - **Centering Algorithm**: Enables the ROV to maintain its position at the center of the tunnel, adjusting its movements in real-time based on sensor input.
