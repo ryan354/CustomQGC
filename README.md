@@ -7,6 +7,8 @@ CustomQGC (Custom Ground Control Station) GS enhances the functionality of Remot
 <p align="center">
   <img src="CustomQGC.PNG">
 </p>
+
+
 ## Key Features
 
 - **Centering Algorithm**: Enables the ROV to maintain its position at the center of the tunnel, adjusting its movements in real-time based on sensor input.
