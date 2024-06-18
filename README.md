@@ -22,12 +22,7 @@ The middleware plays a crucial role by collecting data from the altimeter sensor
 
 **Note**: The middleware component responsible for streaming altimeter data is not included in this repository. Users will need to implement or source this middleware separately to enable the full functionality of the CustomQGC application.
 
-## Getting Started
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/CustomQGC.git
-   cd CustomQGC
 
 
 <p align="center">
