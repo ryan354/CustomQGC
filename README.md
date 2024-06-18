@@ -1,20 +1,27 @@
-# QGroundControl Ground Control Station
+# CustomQGC for Advanced Tunnel Inspection ROV Capabilities
 
-[![Releases](https://img.shields.io/github/release/mavlink/QGroundControl.svg)](https://github.com/mavlink/QGroundControl/releases)
+## Overview
 
-*QGroundControl* (QGC) is an intuitive and powerful ground control station (GCS) for UAVs.
+The CustomQGC (Custom Ground Control) application enhances the functionality of Remotely Operated Vehicles (ROVs) used for tunnel inspection. This application implements a centering algorithm and obstacle avoidance using an array of eight altimeter echosounder sensors. The data from these sensors is processed using a Kalman filter algorithm to ensure accuracy and reliability.
 
-The primary goal of QGC is ease of use for both first time and professional users.
-It provides full flight control and mission planning for any MAVLink enabled drone, and vehicle setup for both PX4 and ArduPilot powered UAVs. Instructions for *using QGroundControl* are provided in the [User Manual](https://docs.qgroundcontrol.com/en/) (you may not need them because the UI is very intuitive!)
+## Key Features
 
-All the code is open-source, so you can contribute and evolve it as you want.
-The [Developer Guide](https://dev.qgroundcontrol.com/en/) explains how to [build](https://dev.qgroundcontrol.com/en/getting_started/) and extend QGC.
+- **Centering Algorithm**: Enables the ROV to maintain its position at the center of the tunnel, adjusting its movements in real-time based on sensor input.
+- **Obstacle Avoidance**: Continuously scans for obstacles, allowing the ROV to navigate safely and efficiently through the tunnel environment.
+- **Active Yaw Control**: Maintains the ROV's orientation, ensuring it faces the desired direction during inspection.
+- **Offset Distance Maintain**: Keeps the ROV at a specified distance from the tunnel walls, improving inspection precision.
+- **Horizontal or Vertical Centering**: Provides options for centering the ROV either horizontally or vertically within the tunnel.
+- **External INS Fusion**: Integrates data from an external Inertial Navigation System (INS) for enhanced positioning accuracy.
 
+## Technical Details
 
-Key Links:
-* [Website](http://qgroundcontrol.com) (qgroundcontrol.com)
-* [User Manual](https://docs.qgroundcontrol.com/en/)
-* [Developer Guide](https://dev.qgroundcontrol.com/en/)
-* [Discussion/Support](https://docs.qgroundcontrol.com/en/Support/Support.html)
-* [Contributing](https://dev.qgroundcontrol.com/en/contribute/)
-* [License](https://github.com/mavlink/qgroundcontrol/blob/master/COPYING.md)
+- **Sensor Array**: The ROV is equipped with eight altimeter echosounder sensors, providing comprehensive environmental data.
+- **Kalman Filter**: Processes the sensor data to reduce noise and improve measurement accuracy, ensuring precise control of the ROV's movements.
+- **Middleware Integration**: Streams the altimeter data to QGC via a UDP port, enabling seamless communication and data exchange between the ROV and the control system.
+
+## Middleware Streaming
+
+The middleware plays a crucial role by collecting data from the altimeter sensors and transmitting it to the CustomQGC application through a UDP port. This setup ensures that the control system receives real-time data, which is essential for the timely execution of the centering algorithm and obstacle avoidance maneuvers.
+
+**Note**: The middleware component responsible for streaming altimeter data is not included in this repository. Users will need to implement or source this middleware separately to enable the full functionality of the CustomQGC application.
+
