@@ -9,6 +9,11 @@ The CustomQGC (Custom Ground Control) application enhances the functionality of 
 
 - **Centering Algorithm**: Enables the ROV to maintain its position at the center of the tunnel, adjusting its movements in real-time based on sensor input.
 - **Obstacle Avoidance**: Continuously scans for obstacles, allowing the ROV to navigate safely and efficiently through the tunnel environment.
+- **Active Yaw Control**: Maintains the ROV's orientation, ensuring it faces the desired direction during inspection.
+- **Offset Distance Maintain**: Keeps the ROV at a specified distance from the tunnel walls, improving inspection precision.
+- **Horizontal or Vertical Centering**: Provides options for centering the ROV either horizontally or vertically within the tunnel.
+- **External INS Fusion**: Integrates data from an external Inertial Navigation System (INS) for enhanced positioning accuracy.
+
 
 ## Technical Details
 
